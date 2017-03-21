@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  	<div id="dt-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
+	    <div class="container-fluid">
+	        <div class="navbar-header"><a class="navbar-brand" href="/">DoramaTime! Version B</a>
+	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+	            </button>
+	        </div>
+	        <div class="collapse navbar-collapse navbar-menubuilder">
+	            <ul class="nav navbar-nav navbar-left">
+	              <li {{#if inicioActive}}class="active"{{/if}}>
+	              	<a href="/">Inicio</a>
+	              </li>
+	              <li class="dropdown {{#if registroActive}}active{{/if}}">
+			          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Registro <span class="caret"></span></a>
+			          	<ul class="dropdown-menu">
+		            		<li {{#if regCatDoramaActive}}class="active"{{/if}}>
+		            			<a href="/categoria-dorama/registro">Registrar Categoría de Dorama</a>
+		            		</li>
+				            <li {{#if regCatPersonajeActive}}class="active"{{/if}}>
+				            	<a href="/categoria-personaje/registro">Registrar Categoría de Personaje</a>
+				            </li>
+				            <li {{#if regActorActive}}class="active"{{/if}}>
+				            	<a href="/actor/registro">Registrar Actor/Actriz</a>
+				            </li>
+				            <li {{#if regDoramaActive}}class="active"{{/if}}>
+				            	<a href="/dorama/registro">Registrar Dorama</a>
+				            </li>
+				            <li {{#if regPersonajeActive}}class="active"{{/if}}>
+				            	<a href="/personaje/registro">Registrar Personaje</a>
+				            </li>
+					         </ul>
+					      </li>
+					      <li class="dropdown {{#if consultaActive}}active{{/if}}">
+			          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consulta <span class="caret"></span></a>
+			          	<ul class="dropdown-menu">
+		            		<li {{#if conCatDoramaActive}}class="active"{{/if}}>
+		            			<a href="/categoria-dorama/consulta">Consultar Categoría de Dorama</a>
+		            		</li>
+				            <li {{#if conCatPersonajeActive}}class="active"{{/if}}>
+				            	<a href="/categoria-personaje/consulta">Consultar Categoría de Personaje</a>
+				            </li>
+				            <li {{#if conActorActive}}class="active"{{/if}}>
+				            	<a href="/actor/consulta">Consultar Actor/Actriz</a>
+				            </li>
+				            <li {{#if conDoramaActive}}class="active"{{/if}}>
+				            	<a href="/dorama/consulta">Consultar Dorama</a>
+				            </li>
+				            <li {{#if conPersonajeActive}}class="active"{{/if}}>
+				            	<a href="/personaje/consulta">Consultar Personaje</a>
+				            </li>
+					         </ul>
+					      </li>
+					      <li {{#if otrasConsultasActive}}class="active"{{/if}}><a href="/api/otras-consultas">Otras Consultas (JSON)</a>
+	            </ul>
+	            <ul class="nav navbar-nav navbar-right">
+	              <li {{#if acercaDeActive}}class="active"{{/if}}><a href="/acerca-de">Acerca De</a>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+	<div class="container-fluid" style="margin-top:50px;">
+		{{{body}}}
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>

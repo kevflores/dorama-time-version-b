@@ -1,0 +1,22 @@
+{
+  "name": "dorama-time-version-b",
+  "version": "1.0.0",
+  "private": true,
+  "description": "'DoramaTime! Version B' es la versión inicial (enfocada en el lado back-end) del proyecto 'DoramaTime!' de Kevin Flores.",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "express": "~4.14.1",
+    "hbs": "~4.0.1",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
