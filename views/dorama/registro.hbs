@@ -1,1 +1,99 @@
-<h1> Sección: {{title}} :)</h1>
+<div class="row" id="dt-row">
+	<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+		<div class="panel panel-primary" id="dt-panel">
+			<div class="panel-heading" id="dt-panel-heading">{{title}}</div>
+
+				<div class="panel-body" id="dt-panel-body">
+
+					<div class="form-group">
+				    <label for="categoria_dorama">Categoría de Dorama</label>
+				    <select class="form-control" name="categoria_dorama" id="categoria_dorama">
+				      <option>Dramas Coreanos</option>
+				      <option>Dramas Japoneses</option>
+				    </select>
+				  </div>
+
+			    <div class="form-group">
+				    <label for="titulo">Título</label>
+				    <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Ingresa el título del dorama aquí">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="resumen">Resumen</label>
+				    <textarea class="form-control" name="resumen" id="resumen" rows="2" placeholder="Ingresa el resumen del dorama aquí"></textarea>
+				  </div>
+
+				  <div class="form-group">
+				    <label for="estacion_tv">Estación de Televisión</label>
+				    <input type="text" name="estacion_tv" id="estacion_tv" class="form-control" placeholder="Ingresa el nombre de la estación de televisión del dorama aquí">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="numero_episodios">Número de Episodios</label>
+				    <input type="number" name="numero_episodios" id="numero_episodios" class="form-control" placeholder="Ingresa el número de episodios del dorama aquí">
+				  </div>
+
+				  <div class="form-group col-xs-12 col-sm-6" id="dt-fecha-inicio">
+				  	<label for="fecha_inicio">Fecha de Inicio</label>
+					  <div class="input-group date" name="fecha_inicio" id="fecha_inicio" style="width:100%;">
+					    <input type="text" class="form-control" style="border-radius:0px;" placeholder="Ingresa la fecha de inicio de emisión del dorama aquí">
+					    <span class="input-group-addon" style="display:none;">
+					    	<i class="glyphicon glyphicon-th"></i>
+						</span>
+					  </div>
+				  </div>
+
+				  <div class="form-group col-xs-12 col-sm-6" id="dt-fecha-finalizacion">
+				  	<label for="fecha_finalizacion">Fecha de Finalización</label>
+					  <div class="input-group date" name="fecha_finalizacion" id="fecha_finalizacion" style="width:100%;">
+					    <input type="text" class="form-control" style="border-radius:0px;" placeholder="Ingresa la fecha de finalización de emisión del dorama aquí">
+					    <span class="input-group-addon" style="display:none;">
+					    	<i class="glyphicon glyphicon-th"></i>
+					    </span>
+					  </div>
+				  </div>
+
+				  <div class="form-group">
+				    <label for="dias_emision">Días de Emisión</label>
+				    <input type="text" name="dias_emision" id="dias_emision" class="form-control" placeholder="Ingresa los días de emisión del dorama aquí">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="horario">Horario</label>
+				    <input type="text" name="horario" id="horario" class="form-control" placeholder="Ingresa el horario de emisión del dorama aquí">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="genero">Género</label>
+				    <input type="text" name="genero" id="genero" class="form-control" placeholder="Ingresa aquí" readonly="readonly">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="director">Director</label>
+				    <input type="text" name="director" id="director" class="form-control" placeholder="Ingresa el nombre del director del dorama aquí">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="productor">Productor</label>
+				    <input type="text" name="productor" id="productor" class="form-control" placeholder="Ingresa el nombre del productor del dorama aquí">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="escritor">Escritor</label>
+				    <input type="text" name="escritor" id="escritor" class="form-control" placeholder="Ingresa el nombre del escritor del dorama aquí">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="imagen">Cargar Imagen</label>
+				    <input type="text" name="imagen" id="imagen" class="form-control" placeholder="Cargar imagen del dorama aquí">
+				  </div>
+
+				  <button type="button" class="btn btn-primary dt-button" id="dt-button">
+				  	<i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar
+				  </button>
+
+				</div> <!-- Fin de panel-body -->
+
+		</div> <!-- Fin de panel -->
+	</div> <!-- Fin de col-**-** -->
+</div> <!-- Fin de row -->

@@ -1,1 +1,71 @@
-<h1> Sección: {{title}} :)</h1>
+{{#if mensajeSuccess}}
+	<div class="row" onclick="quitar()" id="mensaje" style="cursor:pointer;">
+		<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+			<div class="well text-center" style="color:#3B9970;border-color:#3B9970;background-color:#A1E3AC;">
+			¡Los datos han sido enviados satisfactoriamente!
+			</div>
+		</div>
+	</div>
+{{/if}}
+
+{{#if mensajeError}}
+	<div class="row" onclick="quitar()" id="mensaje" style="cursor:pointer;">
+		<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+			<div class="well text-center" style="color:#801818border-color:#771212;background-color:#E49292;">
+			{{razonesError}}
+			</div>
+		</div>
+	</div>
+{{/if}}
+
+<div class="row">
+	<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+		<div class="panel panel-primary" id="dt-panel">
+		<div class="panel-heading" id="dt-panel-heading">{{title}}</div>
+
+			<div class="panel-body" id="dt-panel-body">
+
+				<form action="/categoria-dorama" method="post" accept-charset="utf-8">
+					<div class="form-group">
+						<label for="titulo">Título</label>
+						<input type="text" name="titulo" id="titulo" class="form-control" aria-describedby="tituloAyuda" placeholder="Ingresa el título de la categoría de dorama aquí">
+						<small id="tituloAyuda" class="form-text text-muted">Recuerda que el título debe ser irrepetible.</small>
+					</div>
+
+					<div class="form-group">
+						<label for="descripcion">Descripción</label>
+						<textarea class="form-control" name="descripcion" id="descripcion" rows="2" placeholder="Ingresa la descripción de la categoría de dorama aquí"></textarea>
+					</div>
+
+					<div class="form-group">
+						<label for="pais">País</label>
+						<select class="form-control" name="pais" id="pais">
+							<option value="1">Corea Del Sur</option>
+							<option value="2">Japón</option>
+							<option value="3">Taiwán</option>
+							<option value="4">China</option>
+							<option value="5">Hong Kong</option>
+							<option value="6">Singapur</option>
+							<option value="7">Filipinas</option>
+						</select>
+					</div>
+
+					<button type="submit" class="btn btn-primary dt-button" id="dt-button">
+						<i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar
+					</button>
+				</form>
+
+			</div> <!-- Fin de panel-body -->
+
+		</div> <!-- Fin de panel -->
+	</div> <!-- Fin de col-**-** -->
+</div> <!-- Fin de row -->
+
+
+<script>
+
+function quitar() {
+	document.getElementById("mensaje").style.display = "none";
+}
+
+</script>

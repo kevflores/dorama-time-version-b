@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/otras-consultas', function(req, res, next) {
-  res.render('otras-consultas/index', { title: 'Otras Consultas', otrasConsultasActive: true });
+  res.render('otras-consultas/index', { title: 'API: Otras Consultas', otrasConsultasActive: true });
 });
 
 router.get('/listado-actores', function(req, res, next) {

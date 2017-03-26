@@ -1,21 +1,31 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var express 		      = require('express');
+var path 			        = require('path');
+var favicon 	       	= require('serve-favicon');
+var logger 			      = require('morgan');
+var cookieParser 	    = require('cookie-parser');
+var bodyParser 		    = require('body-parser');
+var mongoose 		       = require('mongoose');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
-var categoriaDoramaRoute = require('./routes/categoria-dorama');
+var index 					        = require('./routes/index');
+var users 				        	= require('./routes/users');
+var categoriaDoramaRoute 	  = require('./routes/categoria-dorama');
 var categoriaPersonajeRoute = require('./routes/categoria-personaje');
-var actorRoute = require('./routes/actor');
-var doramaRoute = require('./routes/dorama');
-var personajeRoute = require('./routes/personaje');
-var otrasConsultasRoute = require('./routes/otras-consultas');
+var actorRoute				      = require('./routes/actor');
+var doramaRoute 			      = require('./routes/dorama');
+var personajeRoute 			    = require('./routes/personaje');
+var otrasConsultasRoute		  = require('./routes/otras-consultas');
 
 var app = express();
 
+// Conexión a la base de datos (MongoLab)
+mongoose.connect('mongodb://kevin:123456@ds137040.mlab.com:37040/doramatimeversionb', function(err){
+    if(err){
+        console.log(err);
+    } else {
+        console.log('Conectado a la base de datos.');
+    }
+});
+ 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -52,7 +62,8 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error', {title:'Página No Disponible'});
 });
 
 module.exports = app;
+

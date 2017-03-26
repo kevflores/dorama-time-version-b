@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', inicioActive: true });
+  res.render('index', { title: 'DoramaTime! Version B', inicioActive: true });
 });
 
 router.get('/acerca-de', function(req, res, next) {

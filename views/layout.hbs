@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{title}}</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>{{title}} | DoramaTime! Version B</title>
+    <!-- Bootstrap CSS CDN -->
+   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Font-Awesome CDN-->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Bootstrap Datepicker CSS -->
+	<link rel="stylesheet" type="text/css" href="/bootstrap-datepicker/css/bootstrap-datepicker.css" />
+	<!-- Estilos DoramaTime Version B CSS -->
 	<link rel='stylesheet' href='/stylesheets/style.css' />
+	
   </head>
   <body>
   	<div id="dt-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -15,10 +22,17 @@
 	        <div class="collapse navbar-collapse navbar-menubuilder">
 	            <ul class="nav navbar-nav navbar-left">
 	              <li {{#if inicioActive}}class="active"{{/if}}>
-	              	<a href="/">Inicio</a>
+	              	<a href="/">
+	              		<i class="fa fa-home" aria-hidden="true"></i>
+	              		Inicio
+	              	</a>
 	              </li>
 	              <li class="dropdown {{#if registroActive}}active{{/if}}">
-			          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Registro <span class="caret"></span></a>
+			          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			          		<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+			          		Registro 
+			          		<span class="caret"></span>
+			          	</a>
 			          	<ul class="dropdown-menu">
 		            		<li {{#if regCatDoramaActive}}class="active"{{/if}}>
 		            			<a href="/categoria-dorama/registro">Registrar Categoría de Dorama</a>
@@ -38,7 +52,11 @@
 					         </ul>
 					      </li>
 					      <li class="dropdown {{#if consultaActive}}active{{/if}}">
-			          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consulta <span class="caret"></span></a>
+			          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			          		<i class="fa fa-search" aria-hidden="true"></i>
+										Consulta 
+										<span class="caret"></span>
+									</a>
 			          	<ul class="dropdown-menu">
 		            		<li {{#if conCatDoramaActive}}class="active"{{/if}}>
 		            			<a href="/categoria-dorama/consulta">Consultar Categoría de Dorama</a>
@@ -57,18 +75,44 @@
 				            </li>
 					         </ul>
 					      </li>
-					      <li {{#if otrasConsultasActive}}class="active"{{/if}}><a href="/api/otras-consultas">Otras Consultas (JSON)</a>
+					      <li {{#if otrasConsultasActive}}class="active"{{/if}}>
+					      	<a href="/api/otras-consultas">
+					      		<i class="fa fa-search-plus" aria-hidden="true"></i>
+					      		API
+					      	</a>
 	            </ul>
 	            <ul class="nav navbar-nav navbar-right">
-	              <li {{#if acercaDeActive}}class="active"{{/if}}><a href="/acerca-de">Acerca De</a>
+	              <li {{#if acercaDeActive}}class="active"{{/if}}>
+	              	<a href="/acerca-de">
+	              	  Acerca De
+	              	</a>
 	            </ul>
 	        </div>
 	    </div>
 	</div>
-	<div class="container-fluid" style="margin-top:50px;">
-		{{{body}}}
+
+	<div class="container-fluid" style="padding-top: 50px;">
+		<div class="row" id="contenedor-top"></div>
+			{{{body}}}
+		<div class="row" id="contenedor-bottom"></div>
 	</div>
+
+    <h6 class="col-xs-12 text-center">Resolución: 
+        <div class="visible-xs">Extra-Small</div>
+        <div class="visible-sm">Small</div>
+        <div class="visible-md">Medium</div>
+        <div class="visible-lg">Large</div>
+    </h6>
+
+    <!-- jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JS CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Bootstrap Datepicker JS -->
+	<script src="/bootstrap-datepicker/js/bootstrap-datepicker.min.js" charset="utf-8"></script>
+	<!-- Bootstrap Datepicker Paquete Español -->
+	<script src="/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js" charset="utf-8"></script>
+	<!-- Código jQuery/JS DoramaTime Version B -->
+    <script src="/javascripts/codigo-jquery.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

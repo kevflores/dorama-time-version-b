@@ -1,1 +1,102 @@
-<h1> Sección: {{title}} :)</h1>
+<div class="row" id="dt-row">
+	<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+		<div class="panel panel-primary" id="dt-panel">
+			<div class="panel-heading" id="dt-panel-heading">{{title}}</div>
+
+				<div class="panel-body" id="dt-panel-body">
+
+					<div class="form-group">
+				    <label for="categoria_dorama">Categoría de Dorama</label>
+				    <select class="form-control" name="categoria_dorama" id="categoria_dorama">
+				      <option>Dramas Coreanos</option>
+				      <option>Dramas Japoneses</option>
+				    </select>
+				  </div>
+
+			    <div class="form-group">
+				    <label for="nombre">Nombre</label>
+				    <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingresa el nombre del actor aquí">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="nombre_alternativo">Nombre Alternativo</label>
+				    <input type="text" name="nombre_alternativo" id="nombre_alternativo" class="form-control" placeholder="Ingresa el nombre alternativo del actor aquí">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="nombre_real">Nombre Real</label>
+				    <input type="text" name="nombre_real" id="nombre_real" class="form-control" placeholder="Ingresa el nombre real del actor aquí">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="apodo">Apodo</label>
+				    <input type="text" name="apodo" id="apodo" class="form-control" placeholder="Ingresa el apodo del actor aquí">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="resumen">Resumen</label>
+				    <textarea class="form-control" name="resumen" id="resumen" rows="2" placeholder="Ingresa el resumen del actor aquí"></textarea>
+				  </div>
+
+				  <div class="form-group">
+				    <label for="lugar_nacimiento">Lugar de Nacimiento</label>
+				    <input type="text" name="lugar_nacimiento" id="lugar_nacimiento" class="form-control" placeholder="Ingresa el Lugar de Nacimiento del actor aquí">
+				  </div>
+
+				  <div class="form-group col-xs-12 col-sm-6" id="dt-fecha-nacimiento">
+				  	<label for="fecha_nacimiento">Fecha de Nacimiento</label>
+					  <div class="input-group date" name="fecha_nacimiento" id="fecha_nacimiento" style="width:100%;">
+					    <input type="text" class="form-control" style="border-radius:0px;" placeholder="Ingresa la fecha de nacicimiento del actor aquí">
+					    <span class="input-group-addon" style="display:none;">
+					    	<i class="glyphicon glyphicon-th"></i>
+						</span>
+					  </div>
+				  </div>
+
+				  <div class="form-group col-xs-12 col-sm-6" id="dt-fecha-fallecimiento">
+				  	<label for="fecha_fallecimiento">Fecha de Fallecimiento</label>
+					  <div class="input-group date" name="fecha_fallecimiento" id="fecha_fallecimiento" style="width:100%;">
+					    <input type="text" class="form-control" style="border-radius:0px;" placeholder="Ingresa la fecha de fallecimiento del actor aquí">
+					    <span class="input-group-addon" style="display:none;">
+					    	<i class="glyphicon glyphicon-th"></i>
+					    </span>
+					  </div>
+				  </div>
+
+				  <div class="form-group">
+				    <label for="genero">Género</label>
+				    <select class="form-control" name="genero" id="genero">
+				      <option>Masculino</option>
+				      <option>Femenino</option>
+				    </select>
+				  </div>
+
+				  <div class="form-group">
+				    <label for="estatura">Estatura</label>
+				    <input type="text" name="estatura" id="estatura" class="form-control" placeholder="Ingresa la estatura del actor aquí">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="peso">Peso</label>
+				    <input type="text" name="peso" id="peso" class="form-control" placeholder="Ingresa el peso del actor aquí">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="url">Dirección URL</label>
+				    <input type="url" name="url" id="url" class="form-control" placeholder="Ingresa la dirección URL del actor aquí">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="imagen">Cargar Imagen</label>
+				    <input type="text" name="imagen" id="imagen" class="form-control" placeholder="Cargar imagen del actor aquí">
+				  </div>
+				  
+				  <button type="button" class="btn btn-primary dt-button" id="dt-button">
+				  	<i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar
+				  </button>
+
+				</div> <!-- Fin de panel-body -->
+
+		</div> <!-- Fin de panel -->
+	</div> <!-- Fin de col-**-** -->
+</div> <!-- Fin de row -->
