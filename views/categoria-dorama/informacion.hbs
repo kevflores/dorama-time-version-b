@@ -4,14 +4,9 @@
 			<div class="panel-heading" id="dt-panel-heading">{{title}}</div>
 
 				<div class="panel-body" id="dt-panel-body">
+
+					La info de la cat va aquí... {{ categoriaDorama.titulo }}
 					
-					{{#if categorias }}
-						{{#each categorias }}
-							<div style="margin-bottom:10px;">{{this.titulo}}</div>
-						{{/each}}
-					{{else }}
-						<div>No hay categorias registradas</div>
-					{{/if}}
 
 
 				</div> <!-- Fin de panel-body -->

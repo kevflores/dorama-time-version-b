@@ -6,11 +6,12 @@
    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- Font-Awesome CDN-->
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<!-- Bootstrap Datepicker CSS -->
-	<link rel="stylesheet" type="text/css" href="/bootstrap-datepicker/css/bootstrap-datepicker.css" />
+	{{#if datePicker}}
+		<!-- Bootstrap Datepicker CSS -->
+		<link rel="stylesheet" type="text/css" href="/bootstrap-datepicker/css/bootstrap-datepicker.css" />
+	{{/if}}
 	<!-- Estilos DoramaTime Version B CSS -->
 	<link rel='stylesheet' href='/stylesheets/style.css' />
-	
   </head>
   <body>
   	<div id="dt-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -97,21 +98,23 @@
 		<div class="row" id="contenedor-bottom"></div>
 	</div>
 
-    <h6 class="col-xs-12 text-center">Resolución: 
-        <div class="visible-xs">Extra-Small</div>
-        <div class="visible-sm">Small</div>
-        <div class="visible-md">Medium</div>
-        <div class="visible-lg">Large</div>
-    </h6>
+  <h6 class="col-xs-12 text-center">Resolución: 
+      <div class="visible-xs">Extra-Small</div>
+      <div class="visible-sm">Small</div>
+      <div class="visible-md">Medium</div>
+      <div class="visible-lg">Large</div>
+  </h6>
 
-    <!-- jQuery CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Bootstrap JS CDN -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- Bootstrap Datepicker JS -->
-	<script src="/bootstrap-datepicker/js/bootstrap-datepicker.min.js" charset="utf-8"></script>
-	<!-- Bootstrap Datepicker Paquete Español -->
-	<script src="/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js" charset="utf-8"></script>
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Bootstrap JS CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  {{#if datePicker}}
+	  <!-- Bootstrap Datepicker JS -->
+		<script src="/bootstrap-datepicker/js/bootstrap-datepicker.min.js" charset="utf-8"></script>
+		<!-- Bootstrap Datepicker Paquete Español -->
+		<script src="/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js" charset="utf-8"></script>
+	{{/if}}
 	<!-- Código jQuery/JS DoramaTime Version B -->
     <script src="/javascripts/codigo-jquery.js" type="text/javascript" charset="utf-8"></script>
   </body>

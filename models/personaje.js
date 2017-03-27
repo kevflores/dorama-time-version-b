@@ -22,6 +22,6 @@ var PersonajeSchema = new Schema({
 	dorama: {type: Schema.Types.ObjectId, ref: 'Dorama'},
 	actor: {type: Schema.Types.ObjectId, ref: 'Actor'},
 	categoriaPersonaje: {type: Schema.Types.ObjectId, ref: 'CategoriaPersonaje'},
-});
+}, { collection: 'personaje' });
 
 module.exports = mongoose.model('Personaje', PersonajeSchema);

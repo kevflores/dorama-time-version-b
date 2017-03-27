@@ -13,7 +13,17 @@ var CategoriaDoramaSchema = new Schema({
 	descripcion: {
 		type: String, 
 		required: [true, 'La descripción de la categoría es obligatoria.']
+	},
+	fechaCreacion: { 
+		type: Date, 
+		required: true, 
+		default: Date.now 
+	},
+	fechaActualizacion: { 
+		type: Date, 
+		required: true, 
+		default: Date.now
 	}
-});
+}, { collection: 'categoria_dorama' });
 
 module.exports = mongoose.model('CategoriaDorama', CategoriaDoramaSchema);

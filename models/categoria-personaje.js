@@ -10,6 +10,6 @@ var CategoriaPersonajeSchema = new Schema({
 		type: String, 
 		required[true,'La descripción de la Categoría de Personaje es obligatoria.']
 	}
-});
+}, { collection: 'categoria_personaje' });
 
 module.exports = mongoose.model('CategoriaPersonaje', CategoriaPersonajeSchema);

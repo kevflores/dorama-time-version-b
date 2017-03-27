@@ -2,7 +2,12 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/registro', function(req, res, next) {
-  res.render('actor/registro', { title: 'Registro de Actor/Actriz', registroActive: true, regActorActive: true });
+  res.render('actor/registro', { 
+  	title: 'Registro de Actor/Actriz', 
+  	registroActive: true, 
+  	regActorActive: true,
+  	datePicker: true 
+  });
 });
 
 router.get('/consulta', function(req, res, next) {

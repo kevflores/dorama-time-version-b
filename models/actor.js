@@ -53,6 +53,6 @@ var ActorSchema = new Schema({
 	}],
 	imagenes: [{picURL: String}],
 	categoriaDorama: {type: Schema.Types.ObjectId, ref: 'CategoriaDorama'}
-});
+}, { collection: 'actor' });
 
 module.exports = mongoose.model('Actor', ActorSchema);

@@ -1,17 +1,17 @@
 {{#if mensajeSuccess}}
-	<div class="row" onclick="quitar()" id="mensaje" style="cursor:pointer;">
-		<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-			<div class="well text-center" style="color:#3B9970;border-color:#3B9970;background-color:#A1E3AC;">
-			¡Los datos han sido enviados satisfactoriamente!
+	<div class="row" onclick="quitar()">
+		<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" id="mensaje" style="cursor:pointer;">
+			<div class="well text-center" style="color:#3B9970;border-color:#3B9970;background-color:#A1E3AC;border-radius:0px;">
+			¡Los datos han sido enviados satisfactoriamente! <a href="/categoria-dorama/{{idCategoriaDorama}}/informacion">Ver Info</a>
 			</div>
 		</div>
 	</div>
 {{/if}}
 
 {{#if mensajeError}}
-	<div class="row" onclick="quitar()" id="mensaje" style="cursor:pointer;">
-		<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-			<div class="well text-center" style="color:#801818border-color:#771212;background-color:#E49292;">
+	<div class="row" onclick="quitar()" style="cursor:pointer;">
+		<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" id="mensaje" style="cursor:pointer;border-radius:0px;">
+			<div class="well text-center" style="color:#801818;border-color:#771212;background-color:#E49292;border-radius:0px;">
 			{{razonesError}}
 			</div>
 		</div>

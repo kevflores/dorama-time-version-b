@@ -21,6 +21,6 @@ var DoramaSchema = new Schema({
 	productor: [{nombre: String}],
 	escritor: [{nombre: String}],
 	categoriaDorama: {type: Schema.Types.ObjectId, ref: 'CategoriaDorama'}
-});
+}, { collection: 'dorama' });
 
 module.exports = mongoose.model('Dorama', DoramaSchema);
