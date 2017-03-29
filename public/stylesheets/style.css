@@ -191,6 +191,12 @@
   padding: 0px;
 }
 
+#dt-label {
+  color: black;
+  font-size: 14px;
+  font-weight: normal;
+}
+
 #dt-separador-botones {
   margin-top:1%;
   margin-bottom:1%;

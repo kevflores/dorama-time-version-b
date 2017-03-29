@@ -6,13 +6,18 @@
 				<div class="panel-body" id="dt-panel-body">
 					
 					{{#if categorias }}
+						<div class="text-center" style="margin-bottom:15px;">
+							<span id="dt-label">Selecciona la categoría a consultar:</span>
+						</div>
 						{{#each categorias }}
-							<div style="margin-bottom:10px;">{{this.titulo}}</div>
+							<a href="/categoria-dorama/{{this._id}}/informacion" type="button" class="btn btn-primary dt-button" id="dt-button">{{this.titulo}}</a>
+							<hr id="dt-separador-botones">
 						{{/each}}
 					{{else }}
-						<div>No hay categorias registradas</div>
+						<div class="text-center">
+							<span id="dt-label">Aún no hay categorías registradas.</span>
+						</div>
 					{{/if}}
-
 
 				</div> <!-- Fin de panel-body -->
 

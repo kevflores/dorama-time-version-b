@@ -2,7 +2,7 @@
 	<div class="row" onclick="quitar()">
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" id="mensaje" style="cursor:pointer;">
 			<div class="well text-center" style="color:#3B9970;border-color:#3B9970;background-color:#A1E3AC;border-radius:0px;">
-			¡Los datos han sido enviados satisfactoriamente! <a href="/categoria-dorama/{{idCategoriaDorama}}/informacion">Ver Info</a>
+			¡La categoría de dorama ha sido registrada satisfactoriamente! <a href="/categoria-dorama/{{idCategoriaDorama}}/informacion">Ver Info</a>
 			</div>
 		</div>
 	</div>
@@ -12,7 +12,10 @@
 	<div class="row" onclick="quitar()" style="cursor:pointer;">
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" id="mensaje" style="cursor:pointer;border-radius:0px;">
 			<div class="well text-center" style="color:#801818;border-color:#771212;background-color:#E49292;border-radius:0px;">
-			{{razonesError}}
+				<span style="display:block;">{{razonesError}}</span>
+				{{#each errores}}
+				<span style="display:block;"><i>{{this.msg}}</i></span>
+				{{/each}}
 			</div>
 		</div>
 	</div>
@@ -28,28 +31,29 @@
 				<form action="/categoria-dorama" method="post" accept-charset="utf-8">
 					<div class="form-group">
 						<label for="titulo">Título</label>
-						<input type="text" name="titulo" id="titulo" class="form-control" aria-describedby="tituloAyuda" placeholder="Ingresa el título de la categoría de dorama aquí">
-						<small id="tituloAyuda" class="form-text text-muted">Recuerda que el título debe ser irrepetible.</small>
+						<input type="text" name="titulo" id="titulo" class="form-control" aria-describedby="tituloAyuda" placeholder="Ingrese el título de la categoría de dorama aquí" {{#if datosInput}}value="{{datosInput.body.titulo}}"{{/if}}>
+						<small id="tituloAyuda" class="form-text text-muted">Recuerde que el título debe ser irrepetible.</small>
 					</div>
 
 					<div class="form-group">
 						<label for="descripcion">Descripción</label>
-						<textarea class="form-control" name="descripcion" id="descripcion" rows="2" placeholder="Ingresa la descripción de la categoría de dorama aquí"></textarea>
+						<textarea class="form-control" name="descripcion" id="descripcion" rows="2" placeholder="Ingrese la descripción de la categoría de dorama aquí">{{#if datosInput}}{{datosInput.body.descripcion}}{{/if}}</textarea>
 					</div>
 
 					<div class="form-group">
 						<label for="pais">País</label>
-						<select class="form-control" name="pais" id="pais">
-							<option value="1">Corea Del Sur</option>
-							<option value="2">Japón</option>
-							<option value="3">Taiwán</option>
-							<option value="4">China</option>
-							<option value="5">Hong Kong</option>
-							<option value="6">Singapur</option>
-							<option value="7">Filipinas</option>
+						<select class="form-control" name="pais" id="pais" type="number">
+							<option>Seleccione</option>}
+							<option value=1>Corea Del Sur</option>
+							<option value=2>Japón</option>
+							<option value=3>Taiwán</option>
+							<option value=4>China</option>
+							<option value=5>Hong Kong</option>
+							<option value=6>Singapur</option>
+							<option value=7>Filipinas</option>
 						</select>
 					</div>
-
+					
 					<button type="submit" class="btn btn-primary dt-button" id="dt-button">
 						<i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar
 					</button>
